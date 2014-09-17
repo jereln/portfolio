@@ -8,5 +8,5 @@ I somehow didn't see this assignment until late at night. I was rushed but was a
 *https://github.com/blowmage/minitest-rails-capybara
 *https://www.railstutorial.org/book/_single-page
 
-https://www.dropbox.com/s/ru91a4yiou58jpo/Screen%20Shot%202014-09-16%20at%2011.32.34%20PM.png?dl=0
+![ScreenShot](https://www.dropbox.com/s/ru91a4yiou58jpo/Screen%20Shot%202014-09-16%20at%2011.32.34%20PM.png?dl=0)
 
