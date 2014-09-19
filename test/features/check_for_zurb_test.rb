@@ -1,9 +1,9 @@
 require "test_helper"
 
-class CheckForZurbTest < Capybara::Rails::TestCase
-  test "sanity" do
-    visit root_path
-    assert_content page, "Hello World"
-    refute_content page, "Goobye All!"
-  end
+feature 'zerb is in use' do 
+	scenario 'zerb files were created' do
+		visit root_path
+
+		page.source.must_include("foundation_and_overrides")
+	end
 end
