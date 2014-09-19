@@ -9,6 +9,7 @@ gem 'sass-rails', '~> 4.0.3'
 gem 'sqlite3'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
+gem 'foundation-rails', '5.4.0'
 
 group :development do
   gem 'spring'
