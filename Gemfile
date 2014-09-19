@@ -9,16 +9,25 @@ gem 'sass-rails', '~> 4.0.3'
 gem 'sqlite3'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
+gem 'foundation-rails', '5.4.0'
+gem 'compass'
 
 group :development do
   gem 'spring'
+  gem 'sqlite3'
 end
 
 group :test do
   gem 'minitest-rails-capybara'
+  gem 'sqlite3'
 end
 
 group :doc do
   gem 'sdoc', '~> 0.4.0', group: :doc
+end
+
+group :production do
+	gem 'rails_12factor'
+	gem 'pg'
 end
 
