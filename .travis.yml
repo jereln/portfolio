@@ -15,7 +15,3 @@ script:
   - bundle exec rake
 bundler_args:
   --binstubs=./bundler_stubs
- deploy:
- provider: heroku
- app: jerels-proftolio
- api_key: d515a165-f898-4a68-ad9c-5113a6fb43a3
