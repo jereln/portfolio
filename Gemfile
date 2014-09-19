@@ -17,12 +17,11 @@ end
 
 group :development do
   gem 'spring'
-  gem 'sqlite3'
+  gem 'rails_layout'
 end
 
 group :test do
   gem 'minitest-rails-capybara'
-  gem 'sqlite3'
 end
 
 group :doc do
