@@ -26,17 +26,11 @@ group :test do
 end
 
 group :doc do
-  gem 'sdoc', '~> 0.4.0', group: :doc
+  gem 'sdoc', '~> 0.4.0'
 end
 
 group :production do
-<<<<<<< HEAD
   gem 'pg'
   gem 'rails_12factor'
 end
-=======
-	gem 'rails_12factor'
-	gem 'pg'
-end
 
->>>>>>> b690b95a8bab3bbd87b5e4e34f4ab308dfc9e696
