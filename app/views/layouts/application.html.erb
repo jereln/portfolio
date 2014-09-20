@@ -1,19 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+  <title><%= content_for?(:title) ? yield(:title) : "Jerel Navarrete" %></title>
 
-    <%= stylesheet_link_tag    "application" %>
-    <%= javascript_include_tag "vendor/modernizr" %>
-    <%= csrf_meta_tags %>
-  </head>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "vendor/modernizr" %>
+  <%= csrf_meta_tags %>
+  <div id="primary-navigation">
+  <nav>
+    <ul>
+      <li class="about"><a>About</a></li>
+      <li class="folio"><a>Folio</a></li>
+      <li class="home"><a><%=image_tag("logo.png", alt: "Home", :size => "150x150")%></a></li>
+      <li class="contact"><a>Contact</a></li>
+      <li class="news"><a>Bonus</a></li>
+    </ul>
+  </nav>
+</div>
+</head>
 
-  <body>
+<body>
 
-    <%= yield %>
-    <%= javascript_include_tag "application" %>
-  </body>
+  <%= yield %>
+  <%= javascript_include_tag "application" %>
+</body>
 </html>
