@@ -19,11 +19,7 @@
  background-size: cover;
  }
 
- .top-bar {
- background:rgba(255,255,255, 0.5)!important;
-}
-
-#header {
+h1 {
 	font-size: 72px;
 	text-align: center;
 	color: white;
@@ -31,4 +27,76 @@
 
 h2 {
 	color: white;
+}
+#primary-navigation {
+    font-family: "GeogrotesqueMedium", Helvetica, Arial, sans-serif;
+    font-size: 1.15em; 
+    text-transform: uppercase;
+    
+    color: #fff;
+    
+    text-align: center;
+    
+    padding-left: 1em; /* nav menu fudge for centering items - tricky cos menu items are different widths */ 
+    
+}
+
+#primary-navigation li {
+    display: inline-block;
+    margin: 0 1.5em;
+    padding: 0 2px;
+    vertical-align: middle;
+}
+
+.ie6 #primary-navigation li, 
+.ie7 #primary-navigation li {
+    display: inline;
+}
+
+#primary-navigation .home {
+    margin-bottom: -25px;
+}
+
+#primary-navigation .home img {
+    display: block;
+}
+
+#primary-navigation a {
+    display: inline-block;
+    padding-bottom: 3px;
+    color: #fff;
+    text-decoration: none;
+    
+    border-bottom: 3px solid transparent;
+    
+    -webkit-transition: border 0.2s ease-in-out;  
+    -moz-transition: border 0.2s ease-in-out;  
+    -o-transition: border 0.2s ease-in-out;  
+    transition: border 0.2s ease-in-out;
+}
+
+#primary-navigation .current a,
+#primary-navigation a:hover,
+.about #primary-navigation .about a,
+.folio #primary-navigation .folio a,
+.contact #primary-navigation .contact a,
+.news #primary-navigation .news a {
+    border-bottom: 3px solid white;
+}
+
+.ie6 #primary-navigation a {
+    border-color: red;
+	filter: chroma(color=red);
+}
+
+
+#primary-navigation .home .current a,
+#primary-navigation .home a:hover {
+    border-bottom-color: transparent;
+}
+
+nav ul, nav li { margin: 0; list-style:none; list-style-image: none; }
+
+nav {
+	display: block;
 }

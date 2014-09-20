@@ -1,23 +1,30 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Jerel Navarrete" %></title>
-    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Portfolio" %>">
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%# Modernizr is required for Zurb Foundation %>
-    <%= javascript_include_tag 'vendor/modernizr' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-    <%= csrf_meta_tags %>
-  </head>
-  <body>
-    <header>
-      
-    </header>
-    <main role="main">
-       <%= render 'layouts/navigation' %>
-       <%= render 'layouts/messages' %>
-       <%= yield %>
-    </main>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title><%= content_for?(:title) ? yield(:title) : "Jerel Navarrete" %></title>
+
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "vendor/modernizr" %>
+  <%= csrf_meta_tags %>
+  <div id="primary-navigation">
+  <nav>
+    <ul>
+      <li class="about"><a>About</a></li>
+      <li class="folio"><a>Folio</a></li>
+      <li class="home"><a><%=image_tag("logo.png", alt: "Home", :size => "150x150")%></a></li>
+      <li class="contact"><a>Contact</a></li>
+      <li class="news"><a>Bonus</a></li>
+    </ul>
+  </nav>
+</div>
+</head>
+
+<body>
+
+  <%= yield %>
+  <%= javascript_include_tag "application" %>
+</body>
 </html>
