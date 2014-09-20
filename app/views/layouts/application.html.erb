@@ -27,4 +27,19 @@
   <%= yield %>
   <%= javascript_include_tag "application" %>
 </body>
+<footer>
+  <nav class="social-media">
+    <ul>
+      <a href="https://github.com/jereln">
+      <li class="github"><%=image_tag('github.png', alt: 'Github', :size => '20x20')%>
+        </a></li>
+      <a href="https://twitter.com/jerelnav">
+      <li class="twitter"><%=image_tag('twitter.gif', alt: 'Twitter', :size => '20x20')%>
+        </a></li>
+        <a href="https://www.linkedin.com/in/jereln">
+      <li class="linkedin"><%=image_tag('linkedin.png', alt: 'Linkedin', :size => '20x20')%>
+        </a></li>
+    </ul>
+  </nav>
+</footer>
 </html>
