@@ -3,23 +3,26 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:bold|Vollkorn">
 
   <title><%= content_for?(:title) ? yield(:title) : "Jerel Navarrete" %></title>
 
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "vendor/modernizr" %>
   <%= csrf_meta_tags %>
-  <div id="primary-navigation">
-  <nav>
-    <ul>
-      <li class="about"><a>About</a></li>
-      <li class="folio"><a>Folio</a></li>
-      <li class="home"><a><%=image_tag("logo.png", alt: "Home", :size => "150x150")%></a></li>
-      <li class="contact"><a>Contact</a></li>
-      <li class="news"><a>Bonus</a></li>
-    </ul>
-  </nav>
-</div>
+  <header>
+    <div id="primary-navigation">
+      <nav>
+        <ul>
+          <li class="about"><a>About</a></li>
+          <li class="folio"><a>Folio</a></li>
+          <li class="home"><a><%=image_tag("logo.png", alt: "Home", :size => "100x100")%></a></li>
+          <li class="contact"><a>Contact</a></li>
+          <li class="news"><a>Bonus</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 </head>
 
 <body>
@@ -31,15 +34,15 @@
   <nav class="social-media">
     <ul>
       <a href="https://github.com/jereln">
-      <li class="github"><%=image_tag('github.png', alt: 'Github', :size => '20x20')%>
+        <li class="github"><%=image_tag('github.png', alt: 'Github', :size => '20x20')%>
         </a></li>
-      <a href="https://twitter.com/jerelnav">
-      <li class="twitter"><%=image_tag('twitter.gif', alt: 'Twitter', :size => '20x20')%>
-        </a></li>
-        <a href="https://www.linkedin.com/in/jereln">
-      <li class="linkedin"><%=image_tag('linkedin.png', alt: 'Linkedin', :size => '20x20')%>
-        </a></li>
-    </ul>
-  </nav>
-</footer>
-</html>
+        <a href="https://twitter.com/jerelnav">
+          <li class="twitter"><%=image_tag('twitter.gif', alt: 'Twitter', :size => '20x20')%>
+          </a></li>
+          <a href="https://www.linkedin.com/in/jereln">
+            <li class="linkedin"><%=image_tag('linkedin.png', alt: 'Linkedin', :size => '20x20')%>
+            </a></li>
+          </ul>
+        </nav>
+      </footer>
+      </html>
