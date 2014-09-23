@@ -23,24 +23,30 @@ class ProjectsController < ApplicationController
   def show
   end
 
+  def edit
+  end
+
   def update
     if @project.update_attributes(project_params)
-      redirect_to @project, notice: 'Project was successfully updated'
-    else render :edit
+      redirect_to @project, notice: 'Project was successfully updated.'
+    else
+      render :edit
     end
   end
 
   def destroy
     @project.destroy
-    redirect_to project_path
+
+    redirect_to projects_url
   end
 
-  private
-  def project_params
-    params.require(:project).permit(:name, :technologies_used)
-  end
+private
 
   def set_project
     @project = Project.find(params[:id])
+  end
+
+  def project_params
+    params.require(:project).permit(:name, :technologies_used)
   end
 end
