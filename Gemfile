@@ -10,6 +10,7 @@ gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 gem 'foundation-rails', '5.4.0'
 gem 'compass'
+gem 'bcrypt-ruby'
 
 group :development do
   gem 'spring'
