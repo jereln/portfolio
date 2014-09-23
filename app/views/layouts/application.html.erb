@@ -14,11 +14,11 @@
     <div id="primary-navigation">
       <nav>
         <ul>
-          <li class="about"><a>About</a></li>
-          <li class="folio"><a>Folio</a></li>
-          <li class="home"><a><%=image_tag("logo.png", alt: "Home", :size => "100x100")%></a></li>
-          <li class="contact"><a>Contact</a></li>
-          <li class="news"><a>Bonus</a></li>
+          <li><a>About</a></li>
+          <li><a>Contact</a></li>
+          <li><a href='/'><%=image_tag("logo.png", alt: "Home", :size => "100x100")%></a></li>
+          <li><a href='/articles'>Articles</a></li>
+          <li><a href='/projects'>Projects</a></li>
         </ul>
       </nav>
     </div>
@@ -29,6 +29,11 @@
 
   <%= yield %>
   <%= javascript_include_tag "application" %>
+  <% flash.each do |key, value| %>
+  <div class="alert-box round <%= flash_class(key) %>">
+    <%= value %>
+  </div>
+<% end %>
 </body>
 <footer>
   <nav class="social-media">

@@ -19,6 +19,7 @@ end
 group :test do
   gem 'minitest-rails-capybara'
   gem 'sqlite3'
+  gem 'launchy'
 end
 
 group :doc do
