@@ -12,6 +12,9 @@ The assignments seem to be getting easier as I begin to grasp the concepts. I fe
 ###Chapter 4  
 I deployed my app to Heroku and had my custom domain direct to the app. The biggest struggle was getting  Foundations 5 to work with my app. After 2 hours of trying to figure out the problem, it turns out all I needed to do was use an older version of the gem. I also set up an AWS account, but I'm not sure what it is or why I need it. Lastly, I spent a lot of time trying to get my app to look nice. This is difficult because I want things to look nice but and a beginner at HTML/CSS. There was an issue with the asset pipeline that Ivan helped me figure out. Also, it is difficult trying to figure out where all the CSS styles are housed.
 
+###Chapter 5
+It is definitely getting easier and easier as we go on. BDD is coming more naturally to me. It was great to go step by step and resolve the errors. Most of the problems that I ran into was due to a spelling/typing mistake.
+
 #Resources
 https://github.com/blowmage/minitest-rails  
 https://github.com/blowmage/minitest-rails-capybara  

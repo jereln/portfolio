@@ -1,2 +1,4 @@
 <h1><%= @project.name %></h1>
-<p>Technologies used: <%=@project.technologies_used %></p
+<p>Technologies used: <%=@project.technologies_used %></p>
+
+<p><%= link_to 'Destroy', @project, method: :delete, data: { confirm: 'Are you sure?' } %></p>

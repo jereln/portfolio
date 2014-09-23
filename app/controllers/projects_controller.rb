@@ -30,6 +30,11 @@ class ProjectsController < ApplicationController
     end
   end
 
+  def destroy
+    @project.destroy
+    redirect_to project_path
+  end
+
   private
   def project_params
     params.require(:project).permit(:name, :technologies_used)
