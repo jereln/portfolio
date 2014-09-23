@@ -23,17 +23,17 @@
       </nav>
     </div>
   </header>
+    <% flash.each do |key, value| %>
+  <div class="alert-box round <%= flash_class(key) %>">
+    <%= value %>
+  </div>
+<% end %>
 </head>
 
 <body>
 
   <%= yield %>
   <%= javascript_include_tag "application" %>
-  <% flash.each do |key, value| %>
-  <div class="alert-box round <%= flash_class(key) %>">
-    <%= value %>
-  </div>
-<% end %>
 </body>
 <footer>
   <nav class="social-media">
