@@ -15,6 +15,9 @@ I deployed my app to Heroku and had my custom domain direct to the app. The bigg
 ###Chapter 5
 It is definitely getting easier and easier as we go on. BDD is coming more naturally to me. It was great to go step by step and resolve the errors. Most of the problems that I ran into was due to a spelling/typing mistake.
 
+##Chapter 6
+It took me about 3-4 hours to complete this assignment. This biggest pain points for me were some migration error that mostly were due to spelling errors or migrating a column into the wrong table. I still have one extra column in a table that I need to delete. The RailsCast episodes on user authentication were very helpful. When creating tests, it can sometimes be hard to know that steps I need to go through to get to where I want (e.g., what feilds there will be and what messages to expect).
+
 #Resources
 https://github.com/blowmage/minitest-rails  
 https://github.com/blowmage/minitest-rails-capybara  
