@@ -10,15 +10,18 @@ gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 gem 'foundation-rails', '5.4.0'
 gem 'compass'
+gem 'devise'
+
+group :development, :test do
+  gem 'sqlite3'
+end
 
 group :development do
   gem 'spring'
-  gem 'sqlite3'
 end
 
 group :test do
   gem 'minitest-rails-capybara'
-  gem 'sqlite3'
   gem 'launchy'
 end
 
