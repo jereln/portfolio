@@ -15,6 +15,7 @@ feature 'As a user, I want articles connected to my account so that I can be att
 		page.text.must_include articles(:first).title
 		page.text.must_include articles(:first).body
 		page.text.must_include 'Batman'
+		page.text.must_include 'successfully'
 		page.has_css? '#author'
 	end
 end

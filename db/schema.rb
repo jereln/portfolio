@@ -19,7 +19,6 @@ ActiveRecord::Schema.define(version: 20140924061408) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "author_id"
-    t.string   "username"
   end
 
   create_table "projects", force: true do |t|
