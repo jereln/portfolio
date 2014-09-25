@@ -1,3 +1,4 @@
+[ ![Codeship Status for jereln/portfolio](https://www.codeship.io/projects/cdbedbf0-2715-0132-93ac-6adc790f84e6/status)](https://www.codeship.io/projects/37653)
 #Portfolio
 
 [Deployed app](http://www.jerelnavarrete.com)
