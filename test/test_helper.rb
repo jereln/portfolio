@@ -20,10 +20,4 @@ class ActiveSupport::TestCase
 		fill_in 'Password', with: 'password'
 		click_on 'Sign in'
 	end
-
-	def make_new_article
-		fill_in 'Title', with: articles(:first).title
-		fill_in 'Body', with: articles(:first).body
-		click_on "Create Article"
-	end
 end

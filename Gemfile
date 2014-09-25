@@ -12,6 +12,7 @@ gem 'foundation-rails', '5.4.0'
 gem 'compass'
 gem 'devise'
 gem 'coveralls', require: false
+gem 'pundit'
 
 group :development, :test do
   gem 'sqlite3'

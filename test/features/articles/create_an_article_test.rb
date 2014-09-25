@@ -1,10 +1,12 @@
 require 'test_helper'
 
-feature 'As an author, I want create articles so that the editor can publish them' do
-	scenario 'creating a post' do
+feature 'creating a post' do
+	scenario 'authenticated user creating a post' do
 		sign_in
 		visit new_article_path
-		make_new_article
+		fill_in 'Title', with: articles(:first).title
+		fill_in 'Body', with: articles(:first).body
+		click_on "Create Article"
 
 		page.must_have_content articles(:first).title
 		page.must_have_content articles(:first).body
@@ -27,7 +29,7 @@ feature 'As an author, I want create articles so that the editor can publish the
 	scenario 'authors cannot publish' do
 		sign_in(:author)
 		visit new_article_path
-		page.wont_have_content 'publish'
+		page.wont_have_content 'Publish'
 	end
 
 	scenario 'editors can publish' do
@@ -35,7 +37,10 @@ feature 'As an author, I want create articles so that the editor can publish the
 		visit new_article_path
 		page.must_have_content 'Published'
 
-		make_new_article
+		fill_in 'Title', with: articles(:first).title
+		fill_in 'Body', with: articles(:first).body
+		check "Published"
+		click_on "Create Article"
 		page.must_have_content 'Published'
 	end
 end

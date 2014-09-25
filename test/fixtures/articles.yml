@@ -2,8 +2,10 @@ first:
   title: Hello World
   body: Lorem ipsum dolor
   author: Batman
+  published: true
 
 second:
   title: I Am Learning Ruby
   body: Blah blah blah blah blah
   author: Superman
+  published: true
