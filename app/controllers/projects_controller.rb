@@ -12,10 +12,10 @@ class ProjectsController < ApplicationController
   def create
     @project = Project.new(project_params)
     if @project.save
-      flash[:notice] = "Project has been created."
+      flash[:notice] = 'Project has been created.'
       redirect_to @project
     else
-      flash.now[:error] =  "Project could not be saved."
+      flash.now[:error] =  'Project could not be saved.'
       render :new
     end
   end
@@ -40,7 +40,7 @@ class ProjectsController < ApplicationController
     redirect_to projects_url
   end
 
-private
+  private
 
   def set_project
     @project = Project.find(params[:id])
