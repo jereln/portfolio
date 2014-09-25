@@ -11,6 +11,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'foundation-rails', '5.4.0'
 gem 'compass'
 gem 'devise'
+gem 'coveralls', require: false
 
 group :development, :test do
   gem 'sqlite3'
