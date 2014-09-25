@@ -15,5 +15,10 @@
   <%= @article.author.username %>
 </p>
 
+<p id="status">
+	<b>Status:</b>
+	<%= @article.published? ? "Published" : "Unpublished" %>
+</p>
+
 <%= link_to 'Edit', edit_article_path(@article) %> |
 <%= link_to 'Back', articles_path %>
