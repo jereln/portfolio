@@ -1,4 +1,4 @@
-require "install/version"
+require 'install/version'
 
 module Install
   # Your code goes here...
