@@ -1,21 +1,6 @@
 require 'test_helper'
 
 feature 'creating a post' do
-  scenario 'authenticated user creating a post' do
-    sign_in
-    visit new_article_path
-    fill_in 'Title', with: articles(:first).title
-    fill_in 'Body', with: articles(:first).body
-    click_on 'Create Article'
-
-    page.must_have_content articles(:first).title
-    page.must_have_content articles(:first).body
-    page.must_have_content 'Editor'
-    page.must_have_content 'successfully'
-    page.has_css? '#author'
-    page.must_have_content 'unpublished'
-  end
-
   scenario 'unauthenticated user cannot visit new_article_path' do
     visit new_article_path
     page.must_have_content 'You need to sign in or sign up before continuing'
@@ -33,14 +18,24 @@ feature 'creating a post' do
   end
 
   scenario 'editors can publish' do
-    sign_in(:editor)
+    sign_in(:Batman)
     visit new_article_path
     page.must_have_content 'Published'
-
-    fill_in 'Title', with: articles(:first).title
-    fill_in 'Body', with: articles(:first).body
+    fill_in 'Title', with: articles(:fourth).title
+    fill_in 'Body', with: articles(:fourth).body
     check 'Published'
     click_on 'Create Article'
     page.must_have_content 'Published'
+    page.must_have_content articles(:fourth).title
+    page.must_have_content articles(:fourth).body
+    page.must_have_content 'Editor'
+    page.must_have_content 'successfully'
+    page.has_css? '#author'
+  end
+
+  scenario 'author can see new article button' do
+    sign_in(:Batman)
+    visit articles_path
+    page.must_have_content 'New Article'
   end
 end

@@ -9,3 +9,15 @@ second:
   body: Blah blah blah blah blah
   author: Superman
   published: true
+
+third: 
+  title: This is an unbublished article
+  body: You should not be able to see this article
+  author: Editor
+  published: false
+
+fourth:
+  title: Publish this
+  body: The editor will publish this
+  author: Editor
+  published: false

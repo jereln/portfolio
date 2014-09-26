@@ -8,16 +8,17 @@ require 'minitest/pride'
 require 'coveralls'
 
 Coveralls.wear!
+module ActiveSupport
+  class TestCase
+    ActiveRecord::Migration.check_pending!
 
-class ActiveSupport::TestCase
-  ActiveRecord::Migration.check_pending!
+    fixtures :all
 
-  fixtures :all
-
-  def sign_in(role = :editor)
-    visit new_user_session_path
-    fill_in 'Email', with: users(role).email
-    fill_in 'Password', with: 'password'
-    click_on 'Sign in'
+    def sign_in(role = :editor)
+      visit new_user_session_path
+      fill_in 'Email', with: users(role).email
+      fill_in 'Password', with: 'password'
+      click_on 'Sign in'
+    end
   end
 end

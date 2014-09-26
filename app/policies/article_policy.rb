@@ -13,13 +13,14 @@ class ArticlePolicy < ApplicationPolicy
   end
 
   def create?
-    @user.editor?
+    @user.editor? || @user.author? if @user
   end
 
   def update?
+    @user.editor? || @user.author? if @user
   end
 
   def publish?
-    @user.editor?
+    @user.editor? if @user
   end
 end

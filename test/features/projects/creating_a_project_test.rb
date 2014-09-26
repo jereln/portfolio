@@ -15,7 +15,7 @@ feature 'adding a project to my portfolio' do
     click_on 'New project'
     fill_in 'Name', with: 'Z'
     click_on 'Create Project'
-    current_path.must_match /projects$/
+    current_path.must_match(/projects$/)
     page.must_have_content 'Project could not be saved'
     page.must_have_content 'Name is too short'
   end
@@ -25,7 +25,7 @@ feature 'adding a project to my portfolio' do
     click_on 'New project'
     fill_in 'Name', with: 'My second project'
     click_on 'Create Project'
-    current_path.must_match /projects$/
+    current_path.must_match(/projects$/)
     page.must_have_content 'Project could not be saved'
     page.must_have_content "Technologies used can't be blank"
   end

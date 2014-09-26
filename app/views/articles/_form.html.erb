@@ -19,13 +19,13 @@
   <%= f.label :body %><br>
   <%= f.text_area :body %>
 </div>
-<div class="actions">
-  <%= f.submit %>
-</div>
-<% if ArticlePolicy.new(current_user, @article).publish? %>
+<% if policy(Article).publish? %>
 <div class="field">
   <%= f.label :published %><br>
   <%= f.check_box :published %>
 </div>
 <% end %>  
+<div class="actions">
+  <%= f.submit %>
+</div>
 <% end %>

@@ -1,6 +1,6 @@
 require 'test_helper'
 
-feature 'as a visitor, I want to be able to sign up for an account so I can perform actions that require me to be logged in' do
+feature 'as a visitor, I want to be able to sign up for an account' do
   scenario ' sign up' do
     visit root_url
     click_on 'Sign Up'
