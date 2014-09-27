@@ -28,7 +28,7 @@ feature 'creating a post' do
     page.must_have_content 'Published'
     page.must_have_content articles(:fourth).title
     page.must_have_content articles(:fourth).body
-    page.must_have_content 'Editor'
+    page.must_have_content 'Batman'
     page.must_have_content 'successfully'
     page.has_css? '#author'
   end
