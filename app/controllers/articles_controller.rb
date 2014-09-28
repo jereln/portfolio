@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
 
   def index
-    @articles = Article.all
+    @articles = policy_scope(Article)
   end
 
   def show
@@ -49,6 +49,9 @@ class ArticlesController < ApplicationController
   # Never trust parameters from the scary internet, only allow
   # the white list through.
   def article_params
-    params.require(:article).permit(:title, :body, (:published if current_user.editor?))
+    params.require(:article).permit(
+      :title,
+      :body,
+      (:published if current_user.editor?))
   end
 end

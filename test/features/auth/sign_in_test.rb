@@ -1,6 +1,6 @@
 require 'test_helper'
 
-feature 'As the site owner, I want to sign oin so I can do awesome admin stuffs' do
+feature 'As the site owner, I want to sign in so I can do admin stuffs' do
   scenario 'sign in' do
     sign_in
 

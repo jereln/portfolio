@@ -20,6 +20,16 @@
       "/Users/jnavarrete/Documents/projects/portfolio/app/models/article.rb": [
         1,
         1,
+        1,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
         null
       ],
       "/Users/jnavarrete/Documents/projects/portfolio/app/models/project.rb": [
@@ -33,6 +43,7 @@
         null,
         1,
         1,
+        0,
         0,
         0,
         null,
@@ -60,6 +71,13 @@
         null,
         1,
         1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
         0,
         0,
         null,
@@ -238,6 +256,6 @@
         null
       ]
     },
-    "timestamp": 1411840807
+    "timestamp": 1411881729
   }
 }

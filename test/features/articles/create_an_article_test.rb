@@ -6,9 +6,9 @@ feature 'creating a post' do
     page.must_have_content 'You need to sign in or sign up before continuing'
   end
 
-  scenario 'unauthenticated user cannot see new article button' do
+  scenario 'users cannot see unpublished articles' do
     visit articles_path
-    page.wont_have_link 'New Article'
+    page.wont_have_content 'You should not be able to see this article'
   end
 
   scenario 'authors cannot publish' do
