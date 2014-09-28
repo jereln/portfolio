@@ -49,6 +49,12 @@
         null,
         0,
         null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
         null
       ],
       "/Users/jnavarrete/Documents/projects/portfolio/test/features/articles/edit_an_article_test.rb": [
@@ -73,9 +79,24 @@
         1,
         0,
         0,
+        0,
         null,
         null,
         1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
         0,
         0,
         0,
@@ -256,6 +277,6 @@
         null
       ]
     },
-    "timestamp": 1411881729
+    "timestamp": 1411883571
   }
 }
