@@ -19,6 +19,7 @@
 	<b>Status:</b>
 	<%= @article.published? ? "Published" : "Unpublished" %>
 </p>
-
-<%= link_to 'Edit', edit_article_path(@article) %> |
+<% if policy(@article).update? %>
+  <%= link_to 'Edit', edit_article_path(@article) %> |
+<% end %>
 <%= link_to 'Back', articles_path %>

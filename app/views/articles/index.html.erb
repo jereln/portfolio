@@ -17,13 +17,16 @@
         <td><%= article.body %></td>
         <td><%= article.author.username %></td>
         <td><%= link_to 'Show', article %></td>
+        <% if policy(article).update? %>
         <td><%= link_to 'Edit', edit_article_path(article) %></td>
+        <% end %>
+        <% if policy(article).destroy? %>
         <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
+<% if policy(Article).create? %>
 <%= link_to 'New Article', new_article_path %>
+<% end %>

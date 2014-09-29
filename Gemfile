@@ -12,9 +12,12 @@ gem 'foundation-rails', '5.4.0'
 gem 'compass'
 gem 'devise'
 gem 'coveralls', require: false
+gem 'pundit'
 
 group :development, :test do
   gem 'sqlite3'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 group :development do
@@ -31,7 +34,6 @@ group :doc do
 end
 
 group :production do
-	gem 'rails_12factor'
-	gem 'pg'
+  gem 'rails_12factor'
+  gem 'pg'
 end
-

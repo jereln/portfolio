@@ -13,13 +13,23 @@
         null
       ]
     },
-    "timestamp": 1411679754
+    "timestamp": 1411792235
   },
   "MiniTest": {
     "coverage": {
       "/Users/jnavarrete/Documents/projects/portfolio/app/models/article.rb": [
         1,
         1,
+        1,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
         null
       ],
       "/Users/jnavarrete/Documents/projects/portfolio/app/models/project.rb": [
@@ -35,8 +45,15 @@
         1,
         0,
         0,
+        0,
         null,
         0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
         null,
         null
       ],
@@ -60,6 +77,27 @@
         null,
         1,
         1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
         0,
         0,
         null,
@@ -127,7 +165,6 @@
         1,
         1,
         0,
-        null,
         0,
         null,
         null
@@ -239,6 +276,6 @@
         null
       ]
     },
-    "timestamp": 1411679999
+    "timestamp": 1412007138
   }
 }

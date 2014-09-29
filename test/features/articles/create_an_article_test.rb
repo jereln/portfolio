@@ -1,41 +1,41 @@
 require 'test_helper'
 
-feature 'As an author, I want create articles so that the editor can publish them' do
-	scenario 'creating a post' do
-		sign_in
-		visit new_article_path
-		make_new_article
+feature 'creating a post' do
+  scenario 'unauthenticated user cannot visit new_article_path' do
+    visit new_article_path
+    page.must_have_content 'You need to sign in or sign up before continuing'
+  end
 
-		page.must_have_content articles(:first).title
-		page.must_have_content articles(:first).body
-		page.must_have_content 'Editor'
-		page.must_have_content 'successfully'
-		page.has_css? '#author'
-		page.must_have_content 'unpublished'
-	end
+  scenario 'users cannot see unpublished articles' do
+    visit articles_path
+    page.wont_have_content 'You should not be able to see this article'
+  end
 
-	scenario 'unauthenticated user cannot visit new_article_path' do
-		visit new_article_path
-		page.must_have_content "You need to sign in or sign up before continuing"
-	end
+  scenario 'authors cannot publish' do
+    sign_in(:author)
+    visit new_article_path
+    page.wont_have_content 'Publish'
+  end
 
-	scenario 'unauthenticated user cannot see new article button' do
-		visit articles_path
-		page.wont_have_link "New Article"
-	end
+  scenario 'editors can publish' do
+    sign_in(:Batman)
+    visit new_article_path
+    page.must_have_content 'Published'
+    fill_in 'Title', with: articles(:fourth).title
+    fill_in 'Body', with: articles(:fourth).body
+    check 'Published'
+    click_on 'Create Article'
+    page.must_have_content 'Published'
+    page.must_have_content articles(:fourth).title
+    page.must_have_content articles(:fourth).body
+    page.must_have_content 'Batman'
+    page.must_have_content 'successfully'
+    page.has_css? '#author'
+  end
 
-	scenario 'authors cannot publish' do
-		sign_in(:author)
-		visit new_article_path
-		page.wont_have_content 'publish'
-	end
-
-	scenario 'editors can publish' do
-		sign_in(:editor)
-		visit new_article_path
-		page.must_have_content 'Published'
-
-		make_new_article
-		page.must_have_content 'Published'
-	end
+  scenario 'author can see new article button' do
+    sign_in(:Batman)
+    visit articles_path
+    page.must_have_content 'New Article'
+  end
 end
