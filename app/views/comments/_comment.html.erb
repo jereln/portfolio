@@ -1,0 +1,6 @@
+<% if comment.approved? %>
+<div class="comment">
+  <p><%= comment.author %> said:</p>
+  <p><%= comment.content %></p>
+</div>
+<% end %>

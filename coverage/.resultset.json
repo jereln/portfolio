@@ -4,6 +4,12 @@
       "/Users/jnavarrete/Documents/projects/portfolio/app/models/article.rb": [
         1,
         1,
+        1,
+        1,
+        null,
+        1,
+        0,
+        null,
         null
       ],
       "/Users/jnavarrete/Documents/projects/portfolio/app/models/project.rb": [
@@ -13,7 +19,7 @@
         null
       ]
     },
-    "timestamp": 1411792235
+    "timestamp": 1412027652
   },
   "MiniTest": {
     "coverage": {
@@ -164,113 +170,24 @@
         null,
         null
       ],
-      "/Users/jnavarrete/Documents/projects/portfolio/test/features/projects/creating_a_project_test.rb": [
+      "/Users/jnavarrete/Documents/projects/portfolio/test/features/comments/approve_comment_test.rb": [
         1,
         null,
-        1,
-        1,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        null,
-        1,
-        0,
-        0,
-        0,
         0,
         0,
         0,
         0,
         null,
-        null,
-        1,
         0,
         0,
         0,
         0,
-        0,
-        0,
-        0,
-        null,
-        null
-      ],
-      "/Users/jnavarrete/Documents/projects/portfolio/test/features/projects/deleting_a_project_test.rb": [
-        1,
-        null,
-        1,
-        1,
-        0,
-        0,
-        0,
-        0,
-        null,
-        null
-      ],
-      "/Users/jnavarrete/Documents/projects/portfolio/test/features/projects/editing_a_project_test.rb": [
-        1,
-        null,
-        1,
-        1,
-        0,
-        null,
-        0,
-        0,
-        null,
-        0,
-        0,
-        null,
-        null,
-        1,
-        0,
-        null,
-        0,
-        0,
-        null,
-        0,
-        0,
-        null,
-        null
-      ],
-      "/Users/jnavarrete/Documents/projects/portfolio/test/features/projects/showing_a_project_test.rb": [
-        1,
-        null,
-        1,
-        1,
-        0,
-        null,
-        0,
-        0,
-        null,
-        null
-      ],
-      "/Users/jnavarrete/Documents/projects/portfolio/test/features/projects/showing_project_index_test.rb": [
-        1,
-        null,
-        1,
-        1,
-        0,
-        null,
-        0,
-        0,
-        0,
-        null,
-        null
-      ],
-      "/Users/jnavarrete/Documents/projects/portfolio/test/features/welcome_test.rb": [
-        1,
-        null,
-        1,
-        1,
         0,
         0,
         null,
         null
       ]
     },
-    "timestamp": 1412011797
+    "timestamp": 1412023597
   }
 }
