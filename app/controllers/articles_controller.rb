@@ -47,9 +47,6 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
   end
 
-  def set_comment
-  end
-
   def article_params
     params.require(:article).permit(
       :title,

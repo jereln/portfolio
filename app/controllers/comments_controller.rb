@@ -1,8 +1,15 @@
 class CommentsController < ApplicationController
+
   def create
-    @article = Article.find(params[:id])
-    @comment = @article.comment.new(comment_params)
-    @comment.save
+    @article = Article.find(params[:article_id])
+    @comment = @article.comments.create(comment_params)
+
+    if @comment.save
+      flash[:notice] = "Comment pending approval"
+      redirect_to article_path(@article)
+    else 
+      render 'article/show'
+    end
   end
 
 private
@@ -14,4 +21,4 @@ private
       :content)
   end
 end
-end
+

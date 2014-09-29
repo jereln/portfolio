@@ -1,6 +1,7 @@
-<% if comment.approved? %>
-<div class="comment">
-  <p><%= comment.author %> said:</p>
-  <p><%= comment.content %></p>
-</div>
+<h2>Comments</h2>
+<% @article.comments.each do |comment| %>
+  <p>
+    <strong><%= comment.author %> said:</strong>
+    <%= comment.content %>
+  </p>
 <% end %>
