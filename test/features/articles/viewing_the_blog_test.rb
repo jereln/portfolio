@@ -20,7 +20,7 @@ feature 'a user visits the blog' do
     page.must_have_content 'You should not be able to see this'
   end
 
-    scenario 'author cannot edit or delete an article they did not write' do
+  scenario 'author cannot edit or delete an article they did not write' do
     sign_in(:author)
     visit articles_path
     page.text.wont_include 'Superman Show Edit Destroy'
