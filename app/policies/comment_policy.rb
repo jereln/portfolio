@@ -1,19 +1,19 @@
 class CommentPolicy < ApplicationPolicy
-  class Scope < Scope
+  def create?
+    @user.author? || @user.editor? if user
+  end
+
+  def approve?
+    @user.author? || @user.editor? if user
+  end
+
+  Scope = Struct.new(:user, :scope) do
     def resolve
-      if @user.editor? || @user.author?
-        scope
+      if user && (user.editor? || user.author?)
+        scope.all
       else
         scope.where(approved: true)
       end
     end
-  end
-
-  def create?
-    @user.author? || @user.editor?
-  end
-
-  def approve?
-    @user.author? || @user.editor?
   end
 end

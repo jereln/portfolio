@@ -25,7 +25,17 @@
 <h2>Comments</h2>
 <div class='comments'>
     <% policy_scope(@article.comments).each do |comment| %>
-        <%= render 'comments/comment', comment: comment unless comment.new_record? %>
+       Author: <%= comment.author %><br>
+       Body: <%= comment.content %>
+
+        <% if policy(@comment).approve? %>
+        Status: <%= comment.approved? ? 'Approved' : 'Unapproved' %>
+        <% if comment.approved? %>
+        <%= button_to 'Unapprove', article_comment_path(@article, comment, params: { comment: { approved: false } }), method: :patch %>
+        <% else %>
+        <%= button_to 'Approve', article_comment_path(@article, comment, params: { comment: { approved: true } }), method: :patch %>
+        <% end %>
+        <% end %>
     <% end %>
 </div>
 <%= render 'comments/form' %>

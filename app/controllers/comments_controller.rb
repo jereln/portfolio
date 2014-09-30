@@ -12,9 +12,11 @@ class CommentsController < ApplicationController
     end
   end
 
-  def update 
+  def update
     if @comment.update(comment_params)
       redirect_to article_path(@article), notice: 'Comment approved'
+    else
+      render 'article/show'
     end
   end
 
