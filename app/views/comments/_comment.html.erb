@@ -1,7 +1,17 @@
-<h2>Comments</h2>
-<% @article.comments.each do |comment| %>
+<div class='comments'>
   <p>
-    <strong><%= comment.author %> said:</strong>
-    <%= comment.content %>
+    Author: <%= comment.author %>
   </p>
-<% end %>
+  <p>
+    Body: <%= comment.content %>
+  </p>
+    
+  <% if policy(@comment).approve? %>
+  <p>Status: <%= comment.approved? ? 'Approved' : 'Unapproved' %></p>  
+    <% if comment.approved? %>
+      <%= button_to 'Unapprove', article_comment_path(@article, comment, params: { comment: { approved: false } }), method: :patch %>
+    <% else %>
+      <%= button_to 'Approve', article_comment_path(@article, comment, params: { comment: { approved: true } }), method: :patch %>
+    <% end %>
+  <% end %>
+</div>

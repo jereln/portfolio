@@ -23,6 +23,7 @@ feature 'a user visits the blog' do
   scenario 'author cannot edit or delete an article they did not write' do
     sign_in(:author)
     visit articles_path
+    save_and_open_page
     page.text.wont_include 'Superman Show Edit Destroy'
     page.text.must_include 'Author Show Edit Destroy'
   end

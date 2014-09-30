@@ -1,24 +1,39 @@
 class CommentsController < ApplicationController
+  before_action :set_comment, only: [:destroy, :update]
+  before_action :set_article, only: [:update, :create]
 
   def create
-    @article = Article.find(params[:article_id])
-    @comment = @article.comments.create(comment_params)
-
+    @comment = @article.comments.new(comment_params)
     if @comment.save
-      flash[:notice] = "Comment pending approval"
+      flash[:notice] = 'Comment pending approval'
       redirect_to article_path(@article)
-    else 
-      render 'article/show'
+    else
+      render 'articles/show'
     end
   end
 
-private
+  def update 
+    if @comment.update(comment_params)
+      redirect_to article_path(@article), notice: 'Comment approved'
+    end
+  end
+
+  private
+
   def comment_params
     params.require(:comment).permit(
       :author,
-      :author_email,
       :author_url,
-      :content)
+      :author_email,
+      :content,
+      :approved)
+  end
+
+  def set_comment
+    @comment = Comment.find(params[:id])
+  end
+
+  def set_article
+    @article = Article.find(params[:article_id])
   end
 end
-

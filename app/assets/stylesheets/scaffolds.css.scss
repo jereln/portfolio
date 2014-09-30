@@ -4,6 +4,7 @@ body {
   font-family: helvetica;
   font-size: 13px;
   line-height: 18px;
+  padding: 40px;
 }
 
 p, ol, ul, td {
@@ -31,6 +32,7 @@ a {
 div {
   &.field, &.actions {
     margin-bottom: 10px;
+    width: 400px;
   }
 }
 
