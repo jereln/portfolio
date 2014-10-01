@@ -20,8 +20,11 @@ It is definitely getting easier and easier as we go on. BDD is coming more natur
 ##Chapter 6
 It took me about 3-4 hours to complete this assignment. This biggest pain points for me were some migration error that mostly were due to spelling errors or migrating a column into the wrong table. I still have one extra column in a table that I need to delete. The RailsCast episodes on user authentication were very helpful. When creating tests, it can sometimes be hard to know that steps I need to go through to get to where I want (e.g., what feilds there will be and what messages to expect).
 
-##Chatper 8
+##Chapter 8
 The documentation for Pundit was fairly thorough. There were a few things that I was missing at first that I noticed after reading the docs more in depth. I had a problem using a subclass in the article policy so I ended up using a struct. The biggest problem I had was my fixtures not loading properly and the user ID not matching the author ID. I ended up manually setting up the ID in the fixture.
+
+##Chapter 9
+It took me a long time to get the comments working. Whenever I got one part working, something else broke. I'm not completely sure what I did in the end to make everything work. Part of the problem is I tried different ways of approaching this assignment and then blew everything up and started over when things started getting broken. This meant that I was confused as to what I had done for the last approach and what I had done for the current approach. In the end, I was able to get everything working. The OmniAuth section was fairly easy to follow along with. I didn't run into any of the problems the some of the other students had.
 
 #Resources
 https://github.com/blowmage/minitest-rails  
