@@ -4,6 +4,12 @@
       "/Users/jnavarrete/Documents/projects/portfolio/app/models/article.rb": [
         1,
         1,
+        1,
+        1,
+        null,
+        1,
+        0,
+        null,
         null
       ],
       "/Users/jnavarrete/Documents/projects/portfolio/app/models/project.rb": [
@@ -13,11 +19,12 @@
         null
       ]
     },
-    "timestamp": 1411792235
+    "timestamp": 1412030022
   },
   "MiniTest": {
     "coverage": {
       "/Users/jnavarrete/Documents/projects/portfolio/app/models/article.rb": [
+        1,
         1,
         1,
         1,
@@ -108,6 +115,22 @@
         0,
         0,
         null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        null,
+        0,
+        null,
+        0,
+        null,
+        0,
+        null,
+        0,
+        0,
+        null,
         null
       ],
       "/Users/jnavarrete/Documents/projects/portfolio/test/features/auth/sign_out_test.rb": [
@@ -159,6 +182,41 @@
         null,
         1,
         1,
+        0,
+        0,
+        null,
+        null
+      ],
+      "/Users/jnavarrete/Documents/projects/portfolio/test/features/comments/approve_comment_test.rb": [
+        1,
+        null,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        null
+      ],
+      "/Users/jnavarrete/Documents/projects/portfolio/test/features/comments/comment_on_article_test.rb": [
+        1,
+        null,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
         0,
         0,
         null,
@@ -271,6 +329,6 @@
         null
       ]
     },
-    "timestamp": 1412011797
+    "timestamp": 1412138066
   }
 }

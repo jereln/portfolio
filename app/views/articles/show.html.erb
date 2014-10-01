@@ -1,8 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
-  <%= @article.title %>
+  <h1><%= @article.title %></h1>
 </p>
 
 <p>
@@ -16,10 +15,28 @@
 </p>
 
 <p id="status">
-	<b>Status:</b>
-	<%= @article.published? ? "Published" : "Unpublished" %>
+    <b>Status:</b>
+    <%= @article.published? ? "Published" : "Unpublished" %>
 </p>
 <% if policy(@article).update? %>
   <%= link_to 'Edit', edit_article_path(@article) %> |
 <% end %>
+
+<h2>Comments</h2>
+<div class='comments'>
+    <% policy_scope(@article.comments).each do |comment| %>
+       Author: <%= comment.author %><br>
+       Body: <%= comment.content %>
+
+        <% if policy(@comment).approve? %>
+        Status: <%= comment.approved? ? 'Approved' : 'Unapproved' %>
+        <% if comment.approved? %>
+        <%= button_to 'Unapprove', article_comment_path(@article, comment, params: { comment: { approved: false } }), method: :patch %>
+        <% else %>
+        <%= button_to 'Approve', article_comment_path(@article, comment, params: { comment: { approved: true } }), method: :patch %>
+        <% end %>
+        <% end %>
+    <% end %>
+</div>
+<%= render 'comments/form' %>
 <%= link_to 'Back', articles_path %>
