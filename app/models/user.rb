@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and 
+  # :confirmable, :lockable, :timeoutable and
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
@@ -18,7 +18,7 @@ class User < ActiveRecord::Base
     where(auth.slice(:provider, :uid)).first_or_create do |user|
       user.provider = auth.provider
       user.uid = auth.uid
-      user.name = auth.info.nickname 
+      user.name = auth.info.nickname
       user.email = "#{user.name}-CHANGEME@twitter.example.com"
     end
   end
