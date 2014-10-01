@@ -34,11 +34,12 @@
   </div>
   <div id='user_header'>
     <% if current_user.present? %>
-    Signed in as <%= current_user.username %> <br>
+    Signed in as <%= current_user.email %> <br>
     <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
     <% else %>
-    <%= link_to 'Sign In', new_user_session_path %> or
-    <%= link_to 'Sign Up', new_user_registration_path %>
+    <%= link_to 'Sign In', new_user_session_path %> |
+    <%= link_to 'Sign Up', new_user_registration_path %> |
+    <%= link_to 'Sign in with Twitter', user_omniauth_authorize_path(:twitter) %>
     <% end %>
   </div>
   <%= yield %>

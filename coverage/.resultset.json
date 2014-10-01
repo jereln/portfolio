@@ -115,6 +115,21 @@
         0,
         0,
         null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
         null
       ],
       "/Users/jnavarrete/Documents/projects/portfolio/test/features/auth/sign_out_test.rb": [
@@ -313,6 +328,6 @@
         null
       ]
     },
-    "timestamp": 1412119959
+    "timestamp": 1412137629
   }
 }

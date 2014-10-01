@@ -13,6 +13,7 @@ gem 'compass'
 gem 'devise'
 gem 'coveralls', require: false
 gem 'pundit'
+gem 'omniauth-twitter'
 
 group :development, :test do
   gem 'sqlite3'
